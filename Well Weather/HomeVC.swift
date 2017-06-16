@@ -37,7 +37,7 @@ class HomeVC: UIViewController {
 
         // weatherMainView take upper half of the main view
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|-16-[v0]-16-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": weatherMainView]))
-        view.addConstraints([NSLayoutConstraint(item: view, attribute: .top, relatedBy: .equal, toItem: weatherMainView, attribute: .top, multiplier: 1, constant: 16)])
+        view.addConstraints([NSLayoutConstraint(item: weatherMainView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 16)])
         view.addConstraints([NSLayoutConstraint(item: weatherMainView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 0.5, constant: 0)])
 
 
