@@ -1,6 +1,6 @@
 import UIKit
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     override func viewDidLoad() {
@@ -10,6 +10,9 @@ class HomeVC: UIViewController {
         setupUI()
         
         view.backgroundColor = UIColor.blue
+        
+        tableView.dataSource = self
+        tableView.delegate = self
     }
     
     let tableView: UITableView = {
@@ -112,7 +115,22 @@ class HomeVC: UIViewController {
         stackView.leftAnchor.constraint(equalTo: weatherMainView.leftAnchor, constant: 8).isActive = true
         weatherMainView.rightAnchor.constraint(equalTo: stackView.rightAnchor, constant: 8).isActive = true
         
+        // set up tableview cell
+        tableView.register(WeatherTableViewCell.self, forCellReuseIdentifier: "weather cell")
     }
     
+    // table view datasource and delegation
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "weather cell", for: indexPath)
+        
+        return cell
+    }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 8
+    }
 }
