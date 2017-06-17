@@ -76,6 +76,7 @@ class WeatherTableViewCell: UITableViewCell {
         contentView.bottomAnchor.constraint(equalTo: cellStackView.bottomAnchor, constant: 8).isActive = true
         cellStackView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 8).isActive = true
         contentView.rightAnchor.constraint(equalTo: cellStackView.rightAnchor, constant: 8).isActive = true
+        
     }
     
     

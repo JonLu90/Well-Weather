@@ -13,6 +13,9 @@
 		38E024E71EF2327200661CBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E024E51EF2327200661CBF /* LaunchScreen.storyboard */; };
 		38E0252D1EF3584400661CBF /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0252C1EF3584400661CBF /* HomeVC.swift */; };
 		38E025381EF46CD000661CBF /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E025371EF46CD000661CBF /* WeatherTableViewCell.swift */; };
+		38E025421EF50F5000661CBF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E025411EF50F5000661CBF /* Constants.swift */; };
+		38E025441EF5166A00661CBF /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E025431EF5166A00661CBF /* CurrentWeather.swift */; };
+		38E025451EF516BF00661CBF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E024FA1EF2451E00661CBF /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,8 @@
 		38E024EE1EF2451D00661CBF /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = SOURCE_ROOT; };
 		38E0252C1EF3584400661CBF /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		38E025371EF46CD000661CBF /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		38E025411EF50F5000661CBF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		38E025431EF5166A00661CBF /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E025451EF516BF00661CBF /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				38E024DB1EF2327200661CBF /* Well Weather */,
-				38E024DA1EF2327200661CBF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,19 +109,17 @@
 				38E024D91EF2327200661CBF /* Well Weather.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		38E024DB1EF2327200661CBF /* Well Weather */ = {
 			isa = PBXGroup;
 			children = (
-				38E024DC1EF2327200661CBF /* AppDelegate.swift */,
-				38E024E01EF2327200661CBF /* Main.storyboard */,
-				38E0252C1EF3584400661CBF /* HomeVC.swift */,
-				38E024E31EF2327200661CBF /* Assets.xcassets */,
-				38E024EE1EF2451D00661CBF /* Alamofire.xcodeproj */,
-				38E024E51EF2327200661CBF /* LaunchScreen.storyboard */,
-				38E024E81EF2327200661CBF /* Info.plist */,
-				38E025371EF46CD000661CBF /* WeatherTableViewCell.swift */,
+				38E024DA1EF2327200661CBF /* Products */,
+				38E025491EF5172600661CBF /* Rescources */,
+				38E025481EF5171B00661CBF /* Controller */,
+				38E025471EF5171400661CBF /* View */,
+				38E025461EF5170E00661CBF /* Model */,
 			);
 			path = "Well Weather";
 			sourceTree = "<group>";
@@ -133,6 +136,44 @@
 				38E025061EF2451E00661CBF /* Alamofire.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		38E025461EF5170E00661CBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38E025431EF5166A00661CBF /* CurrentWeather.swift */,
+				38E025411EF50F5000661CBF /* Constants.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		38E025471EF5171400661CBF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				38E025371EF46CD000661CBF /* WeatherTableViewCell.swift */,
+				38E024E01EF2327200661CBF /* Main.storyboard */,
+				38E024E51EF2327200661CBF /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		38E025481EF5171B00661CBF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				38E024DC1EF2327200661CBF /* AppDelegate.swift */,
+				38E0252C1EF3584400661CBF /* HomeVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		38E025491EF5172600661CBF /* Rescources */ = {
+			isa = PBXGroup;
+			children = (
+				38E024EE1EF2451D00661CBF /* Alamofire.xcodeproj */,
+				38E024E81EF2327200661CBF /* Info.plist */,
+				38E024E31EF2327200661CBF /* Assets.xcassets */,
+			);
+			name = Rescources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,8 +308,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				38E025381EF46CD000661CBF /* WeatherTableViewCell.swift in Sources */,
+				38E025441EF5166A00661CBF /* CurrentWeather.swift in Sources */,
 				38E024DD1EF2327200661CBF /* AppDelegate.swift in Sources */,
 				38E0252D1EF3584400661CBF /* HomeVC.swift in Sources */,
+				38E025421EF50F5000661CBF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

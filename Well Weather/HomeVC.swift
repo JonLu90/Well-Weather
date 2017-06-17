@@ -13,7 +13,15 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        print(CURRENT_WEATHER_URL)
+        currentWeather.downloadWeatherDetails {
+            // TODO
+            // update UI
+        }
     }
+    
+    var currentWeather = CurrentWeather()
     
     let tableView: UITableView = {
         let tableView = UITableView()
@@ -122,7 +130,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // table view datasource and delegation
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "weather cell", for: indexPath)
-        
+        cell.selectionStyle = .none
         return cell
     }
     
