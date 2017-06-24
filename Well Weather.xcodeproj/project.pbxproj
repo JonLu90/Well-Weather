@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3826D1A01EFD636F00F3632A /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3826D19F1EFD636F00F3632A /* Forecast.swift */; };
+		3826D1C31EFE836F00F3632A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3826D1C21EFE836F00F3632A /* Location.swift */; };
 		38E024DD1EF2327200661CBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E024DC1EF2327200661CBF /* AppDelegate.swift */; };
 		38E024E21EF2327200661CBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E024E01EF2327200661CBF /* Main.storyboard */; };
 		38E024E41EF2327200661CBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E024E31EF2327200661CBF /* Assets.xcassets */; };
@@ -71,6 +73,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3826D19F1EFD636F00F3632A /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		3826D1C21EFE836F00F3632A /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		38E024D91EF2327200661CBF /* Well Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Well Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E024DC1EF2327200661CBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38E024E11EF2327200661CBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 			children = (
 				38E025431EF5166A00661CBF /* CurrentWeather.swift */,
 				38E025411EF50F5000661CBF /* Constants.swift */,
+				3826D19F1EFD636F00F3632A /* Forecast.swift */,
+				3826D1C21EFE836F00F3632A /* Location.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -311,7 +317,9 @@
 				38E025441EF5166A00661CBF /* CurrentWeather.swift in Sources */,
 				38E024DD1EF2327200661CBF /* AppDelegate.swift in Sources */,
 				38E0252D1EF3584400661CBF /* HomeVC.swift in Sources */,
+				3826D1A01EFD636F00F3632A /* Forecast.swift in Sources */,
 				38E025421EF50F5000661CBF /* Constants.swift in Sources */,
+				3826D1C31EFE836F00F3632A /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

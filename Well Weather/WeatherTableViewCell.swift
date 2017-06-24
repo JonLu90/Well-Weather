@@ -2,6 +2,14 @@ import UIKit
 
 class WeatherTableViewCell: UITableViewCell {
     
+    func configureCell(forecast: Forecast) {
+        lowTempLabel.text = forecast.lowTemp
+        highTempLabel.text = forecast.highTemp
+        cellWeatherLabel.text = forecast.weather
+        cellWeatherImageView.image = UIImage(named: forecast.weather)
+        cellDateLabel.text = forecast.date
+    }
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -15,6 +23,7 @@ class WeatherTableViewCell: UITableViewCell {
         let label = UILabel()
         label.backgroundColor = UIColor.blue
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.sizeToFit()
         
         return label
     }()
@@ -23,6 +32,8 @@ class WeatherTableViewCell: UITableViewCell {
         let label = UILabel()
         label.backgroundColor = UIColor.blue
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.sizeToFit()
+
         
         return label
     }()
@@ -31,6 +42,7 @@ class WeatherTableViewCell: UITableViewCell {
         let label = UILabel()
         label.backgroundColor = UIColor.blue
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.sizeToFit()
         
         return label
     }()
@@ -41,6 +53,15 @@ class WeatherTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
+    }()
+    
+    let cellWeatherImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = UIColor.black
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = UIViewContentMode.scaleAspectFit
+
+        return imageView
     }()
     
     func setCellUI() {
@@ -65,11 +86,15 @@ class WeatherTableViewCell: UITableViewCell {
         let cellStackView = UIStackView()
         cellStackView.backgroundColor = UIColor.red
         cellStackView.addArrangedSubview(cellStackViewLeft)
+        cellStackView.addArrangedSubview(cellWeatherImageView)
         cellStackView.addArrangedSubview(cellStackViewRight)
         cellStackView.axis = UILayoutConstraintAxis.horizontal
         cellStackView.distribution = .fillEqually
         cellStackView.spacing = 16
         cellStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // set constraints for weatherCellImageView
+        
         
         contentView.addSubview(cellStackView)
         cellStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8).isActive = true
